@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='/time.js' defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href=".\assets\favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src='/theme.js' defer></script>
+    <link  rel="stylesheet" type="text/css" href="\style_add_task.css">
+    <title>UP AGENDA | Ajouter un événement</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!--Menu gauche-->
+        <div class="container container-left">
+          <div class="header">
+            <p>
+              <a href="/welcome">
+              <span id="logo_blanc">UP</span>
+              <span id="logo_violet">AGENDA</span>
+              </a>
+              <div class="row">
+                <div class="col-sm-12" id="heure"></div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12" id="date"></div>
+              </div>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            </p>
+          </div>
+          <br>
+          <div class="btn-new-task">
+            <a href="/creationTache" id="ajouter_une_tache" name="ajouter_une_tache" class="btn-new-task">
+                Ajouter un événement
+            </a>
+        </div>
+                <nav class="menu">
+                  <div class="item-menu" id="first">
+                    <i class="fa fa-calendar" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                      <a href="/">Calendrier</a>
+                  </div>
+                  <div class="item-menu">
+                    <i class="fa fa-tasks" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                    <a href="/evenements" class="">Toutes les tâches</a>
+                  </div>
+                  <div class="item-menu">
+                    <i class="fa fa-calendar-check-o" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                      <a href="/todo">To-do list</a>
+                  </div>
+                  <div class="item-menu">
+                    <i class="fa fa-clock-o" style="font-size:40px; color:rgb(94, 129, 244)"></i>
+                      <a href="/rendezVous" class="">Horaires libres</a>
+                  </div>
+                  <div class="item-menu">
+                      <i class="fa fa-users" style="font-size:30px; color:rgb(94, 129, 244)"></i>
+                        <a href="/recherche">Autres utilisateurs</a>
+                    </div>
+                  <div class="item-menu">
+                    <i class="fa fa-gear" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                      <a href="/settings">Paramètres</a>
+                  </div>
+                  <div class="item-menu">
+                    <i class="fa fa-sign-out" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                      <a href="/api/user/logout">Déconnexion</a>
+                  </div>
+                </nav>
+            </div>
+        <div class="container container-middle">
+        <form method="post" action="/api/task/add">
+        <fieldset>
+        <legend>Ajouter un événement</legend>
+        <% if (locals.error){ %>
+          <div class="alert_error" >
+            <%= locals.error%>
+          </div>
+        <% } %>
+        <% if (locals.success){ %>
+          <div class="alert_success" >
+            <%= locals.success%>
+          </div>
+        <% } %>
+            <label>Titre <strong>*</strong></label><br>
+            <input id="name" class="saisie" name="name" type="text" placeholder=" Titre de l'événement"><br>
+            <label class="label_inline_date_label">Date début<strong>*</strong></label>
+            <label>Date fin<strong>*</strong></label><br>
+            <input id="date" class="inline_date" name = "date" type="date">
+            <input id="date_fin" class="inline_date" name = "date_end" type="date"><br>
+            <label for="sart" class="label_inline_addTask">Heure de début<strong>*</strong></label>
+            <label for="end">Heure de fin<strong>*</strong></label><br>
+            <input id="start" class="inline_time" name="start" type="time">
+            <input id="end" class="inline_time" name = "end" type="time"><br>
+            <label>Lieu</label><br>
+            <input id="adress" class="saisie" name="adress" type="text" placeholder=" Adresse de l'événement"><br>
+            <label>Description</label><br>
+            <input id="description" class="saisie" name = "description" type="text" placeholder=" Description de l'événement"><br><br>
+            <input id="important" class="" name = "important" type="checkbox" placeholder="" maxlength="30" style="transform: scale(1.5);">
+            <label id="mail">&nbsp;Activer un rappel par mail 24h avant l'événement (Important)</label>
+        </fieldset>
+        <input id="btn_ajout" id="btn_ajout" class="bouton" type="submit" placeholder="Ajouter" value="Ajouter">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: hsla(240, 67%, 94%, 0.5);
+  background: url('main.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+}
+header {
+  position:relative;
+  margin:auto;
+  margin-top : -40px;
+  padding : 10px 10px 10px 10px;
+  text-align: center;
+}
+.row {
+  color: rgb(94, 129, 244);
+}
+#logo_violet {
+  font-family: Inter;
+  position:relative;
+  font-size: 44px;
+  color : rgb(94, 129, 244);
+  font-family: Inter;
+}
+#logo_blanc {
+  font-family: Inter;
+  background-color: rgb(94, 129, 244);
+  color : white;
+  font-size: 44px;
+  margin: 10px 8px 0px 0px;
+  padding:5px;
+  border-radius: 10px;
+  font-family: Inter;
+  font-weight: 700;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+#inscription {
+  text-decoration: underline;
+  color: rgb(94, 129, 244);
+}
+#connexion {
+  color: gray;
+}
+[class='color-purple'] {
+  position:relative;
+  text-decoration:none;
+  margin : 30px;
+  font-size: 25px;
+  color : #5E81F4;
+}
+a {
+  position:relative;
+  text-decoration:none;
+  margin : 30px;
+  font-size: 20px;
+}
+a.connection {
+  color :rgba(0, 0, 0, 0.25);
+}
+a.inscription {
+  text-decoration: underline solid;
+  color: rgb(94, 129, 244);
+}
+form {
+  width:600px;
+  margin: auto;
+  display:table;
+}
+fieldset {
+  border:none;
+  margin-top:15px;
+}
+fieldset > legend{
+  position : relative;
+  text-align : center;
+  margin-bottom:25px;
+  font-size : 25px;
+  font-family: Arial;
+  color: rgb(94, 129, 244);
+}
+label {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color :rgb(94, 129, 244);
+
+}
+input.saisie {
+  background-color : hsla(240, 67%, 94%, 0.5);
+  width : 614px;
+  height : 40px;
+  border : 2px solid;
+  border-color : rgb(94, 129, 244);
+  margin : 10px 0px 10px 0px;
+  font-size: 16.5px;
+  border-radius : 4px;
+}
+input#btn_inscription {
+  background-color: rgb(94, 129, 244);
+  height:50px;
+  width:440px;
+  border:none;
+  color:white;
+  border-radius : 25px;
+  position:relative;
+  margin-left:100px;
+  margin-top: 20px;
+  margin-bottom : 25px;
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+}
+.bouton:hover {
+  box-shadow: 3px 8px 22px rgba(94,28,68,.15);
+  transform: scale(1.1);
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+.inline {
+  background-color : hsla(240, 67%, 94%, 0.5);
+  width : 300px;
+  height : 40px;
+  border : 2px solid;
+  border-color : rgb(94, 129, 244);
+  margin : 10px 0px 10px 0px;
+  font-weight: 700;
+  border-radius : 4px;
+}
+.label_inline_addTask {
+  margin-right: 167px;
+}
+.label_inline_register {
+  margin-right : 270px;
+}
+.label_mp {
+  margin-right:180px;
+}
+input#start {
+  margin-right: 8px;
+}
+input#date, input#date_naissance {
+  width: 617px;
+}
+input#mPasse_inscription {
+  margin-right:2px;
+}
+.btn_gauche {
+  height : 25px;
+  width:70px;
+  background: #5E81F4;
+  color : white;
+  position : relative;
+  margin-right : 550px;
+  border-radius : 20px;
+  border : none;
+}
+.btn_droite {
+  height : 25px;
+  width:70px;
+  background: #5E81F4;
+  color:white;
+  border-radius : 12px;
+  border : none;
+}
+.alert_error {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  color:#58151c ;
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+  border-radius: 8px;
+}
+.alert_success {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  color:#a3cfbb ;
+  background-color: #d1e7dd;
+  border: 1px solid #198754;
+  border-radius: 8px;
+}
+footer {
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  color: rgb(94, 129, 244);
+  position: absolute;
+}

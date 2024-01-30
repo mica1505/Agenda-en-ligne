@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/style_welcome.css">
+        <link rel="icon" type="image/x-icon" href=".\assets\favicon.ico">
+        <script src='/time.js' defer></script>
+        <title>UP AGENDA | Qui-sommes nous ?</title>
+    </head>
+    <body>
+		<div class="container">
+			<div class="header">
+				<p>
+                    <a href="/welcome" style="text-decoration : none;"><p>
+                        <span id="logo_blanc">UP</span>
+                        <span id="logo_violet">AGENDA</span>
+                    </a>
+					<div class="row">
+						<div class="col-sm-12" id="heure"></div>
+					</div>
+					<div class="row">
+					  <div class="col-sm-12" id="date"></div>
+			    	</div>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+				    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				</p>
+				<nav>
+					<ul>
+						<li class="titre"><a href="/AboutUs">Qui sommes-nous ?</a></li>
+					</ul>
+				</nav>
+				<% if(locals.user){%>
+					<a href="/"><button class="btn" id="btn3">Agenda</button></a>
+                	<a href="/api/user/logout"><button class="btn" id="btn4">Deconnexion</button></a>
+				<% }else { %>
+					<a href="/inscription"><button class="btn" id="btn2">Inscription</button></a>
+					<a href="/connexion"><button class="btn" id="btn1">Connexion</button></a>
+				<% }%>
+			</div>
+			<div class="content">
+				<article>
+          <header>
+              <h1 class="titre">Qui sommes-nous ?</h1>
+          </header>
+          <p class="paragraphe">&nbsp;&nbsp;&nbsp;&nbsp; Notre équipe est composée de 4 étudiants en deuxième année de licence d'informatique et applications à l'Université Paris Cité 
+            (projet <strong style="color: black;">L2T1</strong>) ayant des compétences en développement web et en design. 
+            Nous avons créé l'<strong style="color: rgb(94, 129, 244)">UP AGENDA</strong> pour aider les étudiants à mieux gérer leur emploi 
+            du temps en gérant des tâches. Notre objectif est de fournir une plateforme conviviale et intuitive pour optimiser la productivité 
+            et la gestion du temps des utilisateurs.</p>
+              <br>
+              <p class="paragraphe">&nbsp;&nbsp;&nbsp;&nbsp; Vous pouvez contacer notre groupe en envoyant un mail à <a href="mailto:projetl2t1@gmail.com?subject=Contact" style="color: blue;">projetl2t1@gmail.com</a>.</p>
+              <h2 class="team">Notre équipe</h2>
+              <div class="row">
+                  <div class="column">
+                      <div class="card">
+                          <img src="/assets/sepanta.jpg" alt="Sepanta Farzollahi">
+                          <div class="members">
+                              <h2>Sepanta Farzollahi</h2>
+                              <p class="mail">sepanta.farzollahi-zanjani@etu.u-paris.fr</p>
+                              <p><button onclick="location.href='mailto:sepanta.farzollahi-zanjani@etu.u-paris.fr?subject=Contact';" class="button">Contacter</button></p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="column">
+                      <div class="card">
+                          <img src="/assets/camelia.jpg" alt="Camelia Mazouz">
+                          <div class="members">
+                              <h2>Camelia Mazouz</h2>
+                              <p class="mail">camelia.mazouz@etu.u-paris.fr</p>
+                              <p><button onclick="location.href='mailto:camelia.mazouz@etu.u-paris.fr?subject=Contact';" class="button">Contacter</button></p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="column">
+                      <div class="card">
+                          <img src="/assets/mayane.jpg" alt="Mayane Cohen">
+                          <div class="members">
+                              <h2>Mayane Cohen</h2>
+                              <p class="mail">mayane.cohen@etu.u-paris.fr</p>
+                              <p><button onclick="location.href='mailto:mayane.cohen@etu.u-paris.fr?subject=Contact';" class="button">Contacter</button></p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="column">
+                    <div class="card">
+                        <img src="/assets/amayas.jpg" alt="Amayas Matmar">
+                        <div class="members">
+                            <h2>Amayas Matmar</h2>
+                            <p class="mail">amayas.matmar@etu.u-paris.fr</p>
+                            <p><button onclick="location.href='mailto:amayas.matmar@etu.u-paris.fr?subject=Contact';" class="button">Contacter</button></p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+      </article>
+			</div>
+			<footer>
+				<p>Copyright © 2023 UP AGENDA. Tous droits réservés.</p>
+			</footer>
+    </body>

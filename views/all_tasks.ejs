@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UP AGENDA | Toutes les tâches</title>
+  <script src='/time.js' defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href=".\assets\favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  <script src='/theme.js' defer></script>
+  <link rel="stylesheet" href="/style_tasks.css">
+  <script src="/all_task.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <!--Menu gauche-->
+        <div class="container container-left">
+          <div class="header">
+            <p>
+              <a href="/welcome">
+              <span id="logo_blanc">UP</span>
+              <span id="logo_violet">AGENDA</span>
+              </a>
+              <div class="row">
+                <div class="col-sm-12" id="heure"></div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12" id="date"></div>
+              </div>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            </p>
+          </div>
+          <br>
+          <div class="btn-new-task">
+            <a href="/creationTache" id="ajouter_une_tache" name="ajouter_une_tache" class="btn-new-task">
+                Ajouter un événement
+            </a>
+        </div>
+            <nav class="menu">
+              <div class="item-menu" id="first">
+                <i class="fa fa-calendar" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                  <a href="/">Calendrier</a>
+              </div>
+              <div class="item-menu">
+                <i class="fa fa-tasks" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                <a href="/evenements" class="color-purple">Toutes les tâches</a>
+              </div>
+              <div class="item-menu">
+                <i class="fa fa-calendar-check-o" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                  <a href="/todo">To-do list</a>
+              </div>
+              <div class="item-menu">
+                <i class="fa fa-clock-o" style="font-size:40px; color:rgb(94, 129, 244)"></i>
+                  <a href="/rendezVous" class="">Horaires libres</a>
+              </div>
+              <div class="item-menu">
+                  <i class="fa fa-users" style="font-size:30px; color:rgb(94, 129, 244)"></i>
+                    <a href="/recherche">Autres utilisateurs</a>
+                </div>
+              <div class="item-menu">
+                <i class="fa fa-gear" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                  <a href="/settings">Paramètres</a>
+              </div>
+              <div class="item-menu">
+                <i class="fa fa-sign-out" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                  <a href="/api/user/logout">Déconnexion</a>
+              </div>
+            </nav>
+        </div>
+         <!--Contenu du milieu-->
+         <div class="container container-middle">
+          <div class="app">
+          <h4 id="all">
+            <% if (locals.error){ %>
+              <div class="alert_error" >
+                <%= locals.error%>
+              </div>
+            <% } %>
+            <% if (locals.success){ %>
+              <div class="alert_success" >
+                <%= locals.success%>
+              </div>
+            <% } %>
+            Toutes les tâches
+              <a href="/creationTache"><i class="fas fa-plus"></i></a>
+          </h4>
+            <div id="tasks">              
+                <% if(locals.tasks) {%>
+                  <% listTask = locals.tasks %>
+                  <% listTask.forEach(function(elem){ %>
+                    <div id="" class="oneTask">
+                    <span class="taskName"><strong><%=elem.name%></strong></span><br><br>
+                    <span class="taskDate"><%=elem.date%>-<%=elem.date_end%></span><br>
+                    <span class="taskTime"><%=elem.start%>-<%=elem.end%></span>
+                    <p class="taskDescription">
+                      <%=elem.adress%><br>
+                      <%=elem.description%>
+                      <% if(elem.important){%>
+                        <% if(elem.emailsent){%>
+                          <br><strong>Email envoyé !</strong>
+                        <% }else {%>
+                          <br><strong>Rappel par mail activé</strong>
+                        <% } %>
+                      <% }%>
+                    </p>
+                    <span class="options">
+                      <i class="fas fa-edit" style="color: rgb(94, 129, 244); font-size: 26px;" onclick="updateTask('<%= elem.id %>')"></i>
+                      <i class="fas fa-trash-alt" style="color: rgb(94, 129, 244); font-size: 26px;" onclick="deleteTask('<%= elem.id %>')"></i>
+                    </span>
+                  </div> 
+                  <%})%>
+                <% } %> 
+            </div>
+          </div>
+        </div>
+  </div>
+</body>
+</html>

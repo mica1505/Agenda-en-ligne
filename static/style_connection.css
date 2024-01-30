@@ -1,0 +1,159 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: hsla(240, 67%, 94%, 0.5);
+    background: url(main.jpg) no-repeat center center fixed;
+    background-size: cover;
+    margin:0px;
+}
+header {
+    position:relative;
+    margin:auto;
+    margin-top : -40px;
+    padding : 10px 10px 10px 10px;
+    text-align: center;
+}
+#logo_violet {
+    font-family: Inter;
+    position:relative;
+    font-size: 44px;
+    color : rgb(94, 129, 244);
+    font-family: Inter;
+}
+#logo_blanc {
+    font-family: Inter;
+    background-color: rgb(94, 129, 244);
+    color : white;
+    font-size: 44px;
+    margin: 10px 8px 0px 0px;
+    padding:5px;
+    border-radius: 10px;
+    font-family: Inter;
+    font-weight: 700;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+a {
+    position:relative;
+    text-decoration:none;
+    margin : 30px;
+    font-size: 20px;
+}
+a.connection {
+    text-decoration: underline solid;
+    color: rgb(94, 129, 244);
+}
+a.inscription {
+    color :rgba(0, 0, 0, 0.25);
+}
+form {
+    width:600px;
+    position : relative;
+    margin: auto;
+    display:table;
+}
+fieldset {
+    border:none;
+    margin-top:15px;
+}
+fieldset > legend {
+    position : relative;
+    text-align : center;
+    margin-right:200px;
+    margin-bottom:25px;
+    font-size : 25px;
+    font-family: Arial;
+    color: rgb(94, 129, 244);
+}
+label {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color :rgb(94, 129, 244);
+}
+input.saisie{
+    background-color : hsla(240, 67%, 94%, 0.5);
+    width : 615px;
+    height : 40px;
+    border : 2px solid;
+    border-color : rgb(94, 129, 244);
+    margin : 10px 0px 10px 0px;
+    font-size: 16.5px;
+    border-radius : 4px;
+}
+input#btn_connexion{
+    background-color: rgb(94, 129, 244);
+    height:50px;
+    width:440px;
+    border:none;
+    color:white;
+    border-radius : 25px;
+    position:relative;
+    margin-left:100px;
+    margin-top: 20px;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+table,th,td {
+    border: 1px solid;
+    border-collapse: collapse;
+    background-color: white;
+}
+td {
+    text-align: center;
+    width : 100px;
+    height : 50px;
+    }
+.row {
+    color: rgb(94, 129, 244);
+}
+#btn1 {
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgb(94, 129, 244) 3%, rgb(94, 129, 244) 100%);
+    border-radius: 30px;
+    border: 1px solid #5e97d1;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 12px 20px;
+    margin: 10px;
+    text-decoration: none;
+    box-shadow: 1px 4px 12px rgba(94,28,68,.15);
+    text-shadow: 0px 1px 0px #528ecc;
+}
+.btn:hover {
+    box-shadow: 3px 8px 22px rgba(94,28,68,.15);
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
+}
+.bouton:hover {
+    box-shadow: 3px 8px 22px rgba(94,28,68,.15);
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.alert_error {
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    color:#58151c ;
+    background-color: #f8d7da;
+    border: 1px solid #dc3545;
+    border-radius: 8px;
+  }
+  .alert_success {
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    color:#a3cfbb ;
+    background-color: #d1e7dd;
+    border: 1px solid #198754;
+    border-radius: 8px;
+  }
+footer {
+    text-align:center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(94, 129, 244);
+}

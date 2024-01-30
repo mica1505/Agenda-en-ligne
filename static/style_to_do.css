@@ -1,0 +1,229 @@
+.container-btn-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.row {
+  color: rgb(94, 129, 244);
+  text-align: center;
+}
+ion-icon {
+  margin-right: 5px;
+  font-size: 20px;
+  margin-top: 2px;
+  color: rgb(94, 129, 244);
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+#calendar {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0;
+  color : rgb(94, 129, 244);
+}
+.container-middle {
+  width: 100%;
+  padding: 0px -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(246, 229, 248, 0.942);
+}
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+.wrapper{
+  display: flex;
+}
+.container {
+  min-height: 100vh;
+}
+.container-left {
+  background: white;
+  min-height: calc(100vh - 60px);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width : 285px;
+}
+#logo_violet{
+  font-family: Inter;
+  font-size: 34px;
+  color : rgb(94, 129, 244);
+}
+#logo_blanc{
+  font-family: Inter;
+  background-color: rgb(94, 129, 244);
+  color : white;
+  font-size: 34px;
+  margin: 10px 8px 0px 0px;
+  padding:5px;
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.btn-new-task {
+  margin-top: 14px;
+  background: rgb(94, 129, 244);
+  padding: 15px;
+  color: white;
+  border-radius: 15px;
+  isolation: isolate;
+  text-align: center;
+}
+div.btn-new-task:hover {
+  box-shadow: 3px 8px 22px rgba(94,28,68,.15);
+  transform: scale(1.1);
+  transition: .2s ease-in-out;
+}
+.menu {
+  margin-top: 10px;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  font-size: 20px;
+  isolation: isolate;
+}
+.item-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#first{
+  margin-top: 30px;
+}
+.item-menu img {
+  width: 22px;
+  height: 22px;
+}
+.item-menu a {
+  color: #8DA1B5;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+.item-menu .color-purple {
+  color: rgb(94, 129, 244);
+}
+.item-menu a:hover {
+  color: rgb(94, 129, 244);
+}
+input.input_toDo{
+  background-color : hsla(240, 67%, 94%, 0.5);
+  width : 615px;
+  height : 40px;
+  border : 2px solid;
+  border-color : rgb(94, 129, 244);
+  margin : 10px 0px 10px 0px;
+  font-weight: 700;
+  border-radius : 4px;
+  font-size: 15px;
+  isolation: isolate;
+}
+.darkmode--activated input.input_toDo{
+  background-color : hsla(240, 34%, 26%, 0.5);
+  color : white;
+}
+label{
+  font-size: 20px;
+  font-family: Arial;
+  color: rgb(94, 129, 244);
+}
+input.input_toDo:focus{
+  font-size: 15px;
+  outline : none;
+}
+fieldset{
+  border:none;
+}
+.to_do{
+  border-color:none;
+  margin-top:15px;
+  background-color: rgba(252, 250, 250, 0.9);
+  border-radius: 12px;
+}
+ul {
+  list-style: none;
+  width: 95.5%;
+  margin : auto;
+  margin-left : -25px;
+  max-height: 420px;
+  overflow-y: auto;  
+}
+ul::-webkit-scrollbar {
+  display: none; 
+}
+.li_box {
+  position: relative;
+  padding: 1rem 1rem;
+  background-color: rgba(202, 214, 255, 0.95);
+  border: 1px solid rgb(144, 169, 250);
+  border-radius: 8px 0px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.darkmode--activated .li_box {
+  background-color: rgba(94, 129, 244, 0.75);
+}
+input.updateToDo{
+  width : 92%;
+  background-color: transparent;
+  font-size: 18px;
+  background-color: transparent;
+  border : none;
+}
+input.updateToDo:focus{
+  font-size: 18px;
+  background-color: transparent;
+  outline : none;
+  border-bottom : 1px solid rgb(55, 101, 252);
+}
+.alert_success {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  color:#198754;
+  background-color: #d1e7dd;
+  border: 1px solid #a3cfbb ;
+  border-radius: 8px;
+}
+#all{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 25px;
+  color: rgb(94, 129, 244);
+  isolation: isolate;
+}
+.fa-plus {
+  text-align: center; 
+  color: rgb(94, 129, 244);
+  padding: -1px;
+  cursor: pointer;
+  isolation: isolate;  
+}
+.fa-plus:hover {
+  box-shadow: 3px 8px 22px rgba(94,28,68,.15);
+  transform: scale(2.1);
+  transition: .2s ease-in-out;
+}
+.header{
+  margin-top : -30px;
+  text-decoration: none;
+  isolation: isolate;
+}
+div.list {
+  position : absolte;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px; 
+}
+.darkmode--activated .container-middle{
+  background: rgb(238, 236, 236);
+}

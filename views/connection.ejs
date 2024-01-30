@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" type="text/css" href="\style_connection.css">
+    <link rel="icon" type="image/x-icon" href=".\assets\favicon.ico">
+    <script src="time.js" defer ></script>
+    <title>UP AGENDA | Connexion</title>
+</head>
+<body class="body_form">
+    <header class="barre_logo">
+        <p>
+          <a href="/welcome"><p>
+            <span id="logo_blanc">UP</span>
+            <span id="logo_violet">AGENDA</span></p></a>
+            <div class="row">
+              <div class="col-sm-12" id="heure"></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12" id="date"></div>
+          </div>
+        </p>
+        <a class="connection" href="/connexion"  class="color-purple">Connexion</a>
+        <a class="inscription" href="/inscription" target="" id="inscription">Inscription</a>
+        </header>
+    <form method="post" action="/api/user/login">
+        <fieldset>
+        <legend>Connectez-vous</legend>
+        <% if (locals.erreur){ %>
+            <div class="alert_error" >
+              <%= locals.erreur%>
+            </div>
+          <% } %>
+          <% if (locals.success){ %>
+            <div class="alert_success" >
+              <%= locals.success%>
+            </div>
+          <% } %>
+            <label>Adresse mail</label><br>
+            <input id="email_connexion" class="saisie" name="email_connexion" type="text" placeholder=" Renseignez votre email"><br>
+            <label>Mot de passe</label><br>
+            <input id="mPasse" class="saisie" name = "mPasse" type="password" placeholder=" Renseignez votre mot e passe" maxlength="30">
+        </fieldset>
+        <input id="btn_connexion" class="bouton" type="submit" placeholder="Se connecter" value="Connexion">
+    </form>
+    <footer>
+      <p>Copyright © 2023 UP AGENDA. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

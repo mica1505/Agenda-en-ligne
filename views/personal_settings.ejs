@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/style_settings.css">
+        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+        <script src='/theme.js' defer></script>
+        <script src='/time.js' defer></script>
+        <script src='/personnal_settings.js' defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js' defer></script>
+        <link rel="icon" type="image/x-icon" href=".\assets\favicon.ico">
+        <title>UP AGENDA | Paramètres personnels</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="menu-toggle">
+              <div class="hamburger">
+                <span></span>
+              </div>
+            </div>
+            <!--Menu gauche-->
+                <div class="container container-left">
+                  <div class="header">
+                    <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+                    <a href="/welcome"><p>
+                      <span id="logo_blanc">UP</span>
+                      <span id="logo_violet">AGENDA</span></a>
+                      <div class="row">
+                        <div class="col-sm-12" id="heure"></div>
+                      </div>
+                      <div class="row">
+                          <div class="col-sm-12" id="date"></div>
+                      </div>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                    </p>
+                  </div>
+                  <br>
+                  <div class="btn-new-task">
+                    <a href="/creationTache" id="ajouter_une_tache" name="ajouter_une_tache" class="btn-new-task">
+                        Ajouter un événement
+                    </a>
+                </div>
+              <aside class="sidebar">
+                <nav class="menu">
+                  <div class="item-menu" id="first">
+                    <i class="fa fa-calendar" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                      <a href="/">Calendrier</a>
+                  </div>
+                  <div class="item-menu">
+                    <i class="fa fa-tasks" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                    <a href="/evenements" class="">Toutes les tâches</a>
+                  </div>
+                  <div class="item-menu">
+                    <i class="fa fa-calendar-check-o" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                      <a href="/todo">To-do list</a>
+                  </div>
+                  <div class="item-menu">
+                    <i class="fa fa-clock-o" style="font-size:40px; color:rgb(94, 129, 244)"></i>
+                      <a href="/rendezVous" class="">Horaires libres</a>
+                  </div>
+                  <div class="item-menu">
+                      <i class="fa fa-users" style="font-size:30px; color:rgb(94, 129, 244)"></i>
+                        <a href="/recherche">Autres utilisateurs</a>
+                    </div>
+                  <div class="item-menu">
+                    <i class="fa fa-gear" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                      <a href="/settings"  class="color-purple">Paramètres</a>
+                  </div>
+                  <div class="item-menu">
+                    <i class="fa fa-sign-out" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                      <a href="/api/user/logout">Déconnexion</a>
+                  </div>
+                </nav>
+              </aside>
+            </div>
+            <div class="container container-middle">
+                <form method="post" action="/api/user/update">
+                    <fieldset>
+                    <legend>Parametres personnels</legend>
+                    <% if (locals.error){ %>
+                      <div class="alert_error" >
+                        <%= locals.error%>
+                      </div>
+                    <% } %>
+                    <% if (locals.success){ %>
+                      <div class="alert_success" >
+                        <%= locals.success%>
+                      </div>
+                    <% } %>
+                    <% user = locals.user %>
+                        <label>Nom</label><br>
+                        <input type="text" class="saisie" id="nom" name="nom" value="<%= user.last_name %>" placeholder="Modifiez votre nom">
+                        <label>Prenom</label><br>
+                        <input type="text" id="prenom" name="prenom" class="saisie" placeholder="Modifiez votre prenom" value="<%= user.first_name %>">
+                        <label>Date de naissance</label><br>
+                        <input id="date" name="date_naissance" type="date" id="date_naissance" class="saisie" value="<%= user.date_birth_parse %>"> 
+                        <label>Adresse mail</label><br>
+                        <input id="email" class="saisie" name="email" type="email" placeholder="Modifiez votre adresse mail" value="<%= user.email %>"><br>
+                        <label>Identifiant</label><br>
+                        <input type="text" class="saisie" id="identifiant" name="identifiant" placeholder="Modifiez votre identifiant" value="<%= user.user_name %>">
+                        <label>Mot de passe</label><br> 
+                        <input id="mPasse" class="saisie" name="mPasse" type="password" minlength="8" placeholder="Modifiez votre mot de passe" >
+                        <label>Confirmation de mot de passe</label><br> 
+                        <input id="confirm_mPasse" class="saisie" name="mPasseConfirmation" type="password" minlength="8" placeholder="Confirmez votre nouveau mot de passe" >
+                    </fieldset>
+                    <br><br>
+                    <input id="btn_inscription" class="bouton" type="submit" value="Enregistrer les modifications">
+                    <input id="btn_annuler" class="bouton" onclick="cancelUpdate()" type="button" value="Annuler">
+                    <input id="btn_suppression" class="openModal" type="button" onclick="openModalRemove()" value="Suppression du compte">
+                    <div class="modal">
+                      <div class="modalContent">
+                        <span class="close">x</span>
+                        <p class="message">Êtes-vous sur de vouloir supprimer votre compte ?</p>
+                        <p>N.B. En cas de suppression, vous ne pouvez plus restaurer votre compte.</p>
+                        <input type="button" class="del" onclick="deleteUser()" value="Suppression de compte">
+                        <input type="button" class="cancel" onclick="closeModalRemove()" value="Annuler">
+                      </div>
+                    </div>
+                    <script>
+                      var span = document.querySelector(".close");
+                      var modal = document.querySelector(".modal");span.addEventListener("click", () => {
+                        closeModalRemove();
+                      });
+                    </script>
+            </div>
+        </form>
+    </body>
+</html>

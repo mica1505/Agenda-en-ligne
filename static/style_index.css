@@ -1,0 +1,228 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+#calendar {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0;
+  color : rgb(94, 129, 244);
+  isolation: isolate;
+}
+.container-middle {
+  width: 100%;
+  padding: 0px -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(246, 229, 248, 0.942);
+}
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+.wrapper{
+  display: flex;
+}
+.container {
+  min-height: 100vh;
+}
+.container-left {
+  background: white;
+  min-height: calc(100vh - 60px);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width : 345px;
+}
+#logo_violet{
+  font-family: Inter;
+  font-size: 34px;
+  color : rgb(94, 129, 244);
+}
+#logo_blanc{
+  font-family: Inter;
+  background-color: rgb(94, 129, 244);
+  color : white;
+  font-size: 34px;
+  margin: 10px 8px 0px 0px;
+  padding:5px;
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.btn-new-task {
+  margin-top: 30px;
+  background: rgb(94, 129, 244);
+  padding: 15px;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  position: relative;
+}
+div.btn-new-task:hover {
+  box-shadow: 3px 8px 22px rgba(94,28,68,.15);
+  transform: scale(1.1);
+  transition: .2s ease-in-out;
+}
+.menu {
+  margin-top: 10px;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  font-size: 20px;
+  isolation: isolate;
+}
+.item-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#first{
+  margin-top: 14px;
+}
+.item-menu img {
+  width: 22px;
+  height: 22px;
+}
+.item-menu a {
+  color: #8DA1B5;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+.item-menu .color-purple {
+  color: rgb(94, 129, 244);
+}
+.item-menu a:hover {
+  color: rgb(94, 129, 244);
+}
+.container-btn-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.btn-user {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+.colonne {
+  background: white;
+  width: calc(100vh/7);
+  min-height: 80vh;
+  border: 1px solid rgb(94, 129, 244);
+}
+.case {
+  background: white;
+  width: calc(100vh/7);
+  height: 10vh;
+  border-bottom: 1px solid rgb(94, 129, 244);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(94, 129, 244);
+  font-size: 20px;
+  font-weight: 700;
+}
+.case p {
+  font-size: 12px;
+}
+.sidebar {
+	flex: 1 1 0;
+	padding: 2rem;
+}
+* {
+	box-sizing: border-box;
+}
+.row {
+  color: rgb(94, 129, 244);
+  text-align: center;
+}
+#calendar {
+  width: 750px;
+}
+#calendar {
+  width: 750px;
+}
+:root {
+  --fc-small-font-size: .85em;
+  --fc-page-bg-color: #fff;
+  --fc-neutral-bg-color: rgba(208, 208, 208, 0.3);
+  --fc-neutral-text-color: #808080;
+  --fc-border-color: #ddd;
+  --fc-button-bg-color: #5E81F4;
+  --fc-button-text-color: #f8f4f4;
+  --fc-button-hover-bg-color: #4f71e1;
+  --fc-button-border-color: #5E81F4;
+  --fc-button-active-bg-color: #b1c3fe;
+  --fc-button-active-border-color: #b1c3fe;
+}
+[class='fc-dayGridMonth-view fc-view fc-daygrid']{
+  background-color: white;
+}
+[class="fc-timeGridWeek-view fc-view fc-timegrid"]{
+  background-color: white;
+}
+[class="fc-timeGridDay-view fc-view fc-timegrid"]{
+  background-color: white;
+}
+[class="fc-listYear-view fc-view fc-list fc-list-sticky"]{
+  background-color: white;
+}
+[class="fc-toolbar-title"]{
+  width : px;
+}
+[class="fc-header-toolbar fc-toolbar fc-toolbar-ltr"]{
+  width :px;
+}
+.fc .fc-col-header-cell-cushion {
+    display: inline-block;
+    padding: 2px 4px;
+}
+.darkmode--activated [class='fc-dayGridMonth-view fc-view fc-daygrid']{
+  background-color: rgb(66, 66, 66);
+}
+[class="fc-timeGridWeek-view fc-view fc-timegrid"]{
+  background-color: white;
+}
+.darkmode--activated [class="fc-timeGridWeek-view fc-view fc-timegrid"]{
+  background-color: rgb(66, 66, 66);
+}
+[class="fc-timeGridDay-view fc-view fc-timegrid"]{
+  background-color: white;
+}
+.darkmode--activated [class="fc-timeGridDay-view fc-view fc-timegrid"]{
+  background-color: rgb(66, 66, 66);
+}
+[class="fc-timeGridPlanning-view fc-view fc-timegrid"]{
+  background-color: white;
+}
+.darkmode--activated [class="fc-timeGridPlanning-view fc-view fc-timegrid"]{
+  background-color: rgb(66, 66, 66);
+}
+.darkmode--activated [class="fc-listYear-view fc-view fc-list fc-list-sticky"]{
+  background-color: rgb(66, 66, 66);
+}
+[class="fc-toolbar-title"]{
+  width : px;
+}
+[class="fc-header-toolbar fc-toolbar fc-toolbar-ltr"]{
+  width :px;
+}
+.fc .fc-col-header-cell-cushion {
+    display: inline-block;
+    padding: 2px 4px;
+}
+.darkmode--activated .container-middle{
+  background: rgb(238, 236, 236);
+}
+.header{
+  margin-top : -30px;
+  text-decoration: none;
+  isolation: isolate;
+}

@@ -1,0 +1,218 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+.container-middle {
+  width: 100%;
+  padding: 0px -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(246, 229, 248, 0.942);
+}
+a {
+  text-decoration: none;
+}
+.wrapper{
+  display: flex;
+}
+.container {
+  min-height: 100vh;
+}
+.container-left {
+  background: white;
+  min-height: calc(100vh - 60px);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width : 345px;
+}
+#logo_violet{
+font-family: Inter;
+  font-size: 34px;
+  color : rgb(94, 129, 244);
+}
+#logo_blanc{
+font-family: Inter;
+  background-color: rgb(94, 129, 244);
+  color : white;
+  font-size: 34px;
+  margin: 10px 8px 0px 0px;
+  padding:5px;
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.btn-new-task {
+  margin-top: -4px;
+  background: rgb(94, 129, 244);
+  padding: 15px;
+  color: white;
+  border-radius: 15px;
+  text-align: center;
+  isolation: isolate;
+}
+div.btn-new-task:hover {
+  box-shadow: 3px 8px 22px rgba(94,28,68,.15);
+  transform: scale(1.1);
+  transition: .2s ease-in-out;
+}
+.menu {
+  margin-top: 10px;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  font-size: 20px;
+  isolation: isolate;
+}
+.item-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#first{
+  margin-top: 30px;
+}
+.item-menu img {
+  width: 22px;
+  height: 22px;
+}
+.item-menu a {
+  color: #8DA1B5;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+.item-menu .color-purple {
+  color: rgb(94, 129, 244);
+}
+.item-menu a:hover {
+  color: rgb(94, 129, 244);
+}
+.row {
+  color: rgb(94, 129, 244);
+  text-align: center;
+}
+.btn-user {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+* {
+    box-sizing: border-box;
+}
+form{
+  position : relative;
+}
+fieldset{
+  border:none;
+  margin-top:50px;
+}
+fieldset > legend{
+  position : relative;
+  text-align : center;
+  margin-right:200px;
+  margin-bottom:25px;
+  font-size : 25px;
+  color: rgb(94, 129, 244);
+  font-weight: bold;
+}
+label{
+  font-size: 20px; 
+  color: rgb(94, 129, 244);
+}
+input.saisie{
+  background-color : hsla(240, 67%, 94%, 0.5);
+  width : 614px;
+  height : 40px;
+  border : 2px solid;
+  border-color : rgb(94, 129, 244);
+  margin : 10px 0px 10px 0px;
+  font-size: 16.5px;
+  border-radius : 4px;
+}
+.darkmode--activated input.saisie{
+  background-color : hsla(240, 34%, 26%, 0.5);
+  color : white;
+}
+input#btn_ajout, .bouton{
+  background-color: hsla(226, 87%, 66%, 1);
+  height:50px;
+  width:440px;
+  border:none;
+  color:white;
+  border-radius : 20px;
+  position:relative;
+  margin-left:100px;
+  margin-top: 30px;
+  font-size: 25px;
+  cursor: pointer;
+}
+input#btn_ajout:hover{
+  box-shadow: 3px 8px 22px rgba(94,28,68,.15);
+  transform: scale(1.1);
+  transition: .2s ease-in-out;
+}
+.inline_time{
+background-color : hsla(240, 67%, 94%, 0.5);
+width : 300px;
+height : 40px;
+border : 2px solid;
+border-color : rgb(94, 129, 244);
+margin : 10px 0px 10px 0px;
+font-weight: 700;
+border-radius : 4px;
+}
+.inline_date{
+  background-color : hsla(240, 67%, 94%, 0.5);
+  width : 300px;
+  height : 40px;
+  border : 2px solid;
+  border-color : rgb(94, 129, 244);
+  margin : 10px 0px 10px 0px;
+  font-weight: 700;
+  border-radius : 4px;
+}
+#date {
+  margin-right : 0.5rem;
+}
+#start{
+  margin-right : 0.5rem;
+}
+.label_inline_addTask{
+margin-right: 167px;
+}
+.label_inline_date_label{
+  margin-right: 12.6rem;
+}
+.label_inline_register{
+margin-right : 270px;
+}
+.label_mp{
+margin-right:180px;
+}
+.alert_error {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  color:#58151c ;
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+  border-radius: 8px;
+}
+.alert_success {
+position: relative;
+padding: 1rem 1rem;
+margin-bottom: 1rem;
+color:#198754;
+background-color: #d1e7dd;
+border: 1px solid #a3cfbb ;
+border-radius: 8px;
+}
+.header{
+  margin-top : -30px;
+  text-decoration: none;
+  isolation: isolate;
+}
+.darkmode--activated .container-middle{
+  background: rgb(238, 236, 236);
+}

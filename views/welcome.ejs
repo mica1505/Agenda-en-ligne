@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/style_welcome.css">
+        <link rel="icon" type="image/x-icon" href=".\assets\favicon.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src='/time.js' defer></script>
+        <title>UP AGENDA | Accueil</title>
+    </head>
+    <body>
+		<div class="container">
+			<div class="header">
+				<p>
+					<a href="/welcome" style="text-decoration : none;"><p>
+                        <span id="logo_blanc">UP</span>
+                        <span id="logo_violet">AGENDA</span>
+                    </a>
+					<div class="row">
+						<div class="col-sm-12" id="heure"></div>
+					</div>
+					<div class="row">
+					  <div class="col-sm-12" id="date"></div>
+			    	</div>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+				    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				</p>
+				<nav>
+					<ul>
+						<li><a href="/AboutUs">Qui sommes-nous ?</a></li>
+					</ul>
+				</nav>                
+				<% if(locals.user){%>
+					<a href="/"><button class="btn" id="btn3">Agenda</button></a>
+                	<a href="/api/user/logout"><button class="btn" id="btn4">Deconnexion</button></a>
+				<% }else { %>
+					<a href="/inscription"><button class="btn" id="btn2">Inscription</button></a>
+					<a href="/connexion"><button class="btn" id="btn1">Connexion</button></a>
+				<% }%>
+			</div>
+			<div class="content">
+				<div class="text">
+					<h1>Up Agenda, l'agenda en ligne intelligent qui s'adapte à votre vie professionnelle et personnelle !</h1>
+					<p>UP AGENDA aide les étudiants et les professionnels à mieux gérer leur <br>emploi 
+					du temps en gérant des tâches<br>et des rendez-vous. Ne manquez plus aucun rendez-vous grâce à UP AGENDA, <br>l'agenda en ligne qui vous accompagne partout, tout le temps !
+					</p>
+			   </div>
+			   <i class="fa fa-calendar" style="font-size:350px;"></i>
+			</div>
+		</div>
+		<footer>
+			<p>Copyright © 2023 UP AGENDA. Tous droits réservés.</p>
+		</footer>
+    </body>
+</html>

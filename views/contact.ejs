@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style_settings.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  <script src='/theme.js' defer></script>
+  <script src='/time.js' defer></script>
+  <link rel="icon" type="image/x-icon" href=".\assets\favicon.ico">
+  <title>UP AGENDA | Nous contacter</title>
+</head>
+<body>
+  <div class="wrapper">
+      <!--Menu gauche-->
+    <div class="container container-left">
+      <div class="header">
+        <p>
+          <a href="/welcome">
+          <span id="logo_blanc">UP</span>
+          <span id="logo_violet">AGENDA</span>
+          </a>
+          <div class="row">
+            <div class="col-sm-12" id="heure"></div>
+          </div>
+          <div class="row">
+              <div class="col-sm-12" id="date"></div>
+          </div>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </p>
+      </div>
+      <br>
+      <div class="btn-new-task">
+        <a href="/creationTache" id="ajouter_une_tache" name="ajouter_une_tache" class="btn-new-task">
+            Ajouter un événement
+        </a>
+      </div>
+        <aside class="sidebar">
+            <nav class="menu">
+                <div class="item-menu" id="first">
+                  <i class="fa fa-calendar" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                    <a href="/">Calendrier</a>
+                </div>
+                <div class="item-menu">
+                  <i class="fa fa-tasks" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                  <a href="/evenements">Toutes les tâches</a>
+                </div>
+                <div class="item-menu">
+                  <i class="fa fa-calendar-check-o" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                    <a href="/todo">To-do list</a>
+                </div>
+                <div class="item-menu">
+                  <i class="fa fa-clock-o" style="font-size:40px; color:rgb(94, 129, 244)"></i>
+                    <a href="/rendezVous" class="">Horaires libres</a>
+                </div>
+                <div class="item-menu">
+                    <i class="fa fa-users" style="font-size:30px; color:rgb(94, 129, 244)"></i>
+                      <a href="/recherche">Autres utilisateurs</a>
+                  </div>
+                <div class="item-menu">
+                  <i class="fa fa-gear" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                    <a href="/settings" class="color-purple">Paramètres</a>
+                </div>
+                <div class="item-menu">
+                  <i class="fa fa-sign-out" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+                    <a href="/api/user/logout">Déconnexion</a>
+                </div>
+              </nav>
+        </aside>
+    </div>
+    <!--Contenu du milieu-->
+    <div class="container container-middle">
+      <article>
+        <header>
+            <h1 class="title">Nous contacter</h1>
+        </header>
+            <p class="paragraphe">&nbsp;&nbsp;&nbsp;&nbsp; Vous pouvez contatcer les développeurs en envoyant un mail à <a href="mailto:projetl2t1@gmail.com?subject=Contact" style="color: rgb(94, 129, 244);">projetl2t1@gmail.com</a>.</p>
+            <br>
+            <h2 class="team">Notre équipe</h2>
+            <br>
+            <div class="row">
+              <div class="column">
+                <div class="card">
+                    <img src="/assets/sepanta.jpg" alt="Sepanta Farzollahi">
+                    <div class="members">
+                        <h2>Sepanta Farzollahi</h2>
+                        <p class="mail">sepanta.farzollahi-zanjani@etu.u-paris.fr</p>
+                        <p><button onclick="location.href='mailto:sepanta.farzollahi-zanjani@etu.u-paris.fr?subject=Contact';" class="button">Contacter</button></p>
+                    </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="card">
+                    <img src="/assets/camelia.jpg" alt="Camelia Mazouz">
+                    <div class="members">
+                        <h2>Camelia Mazouz</h2>
+                        <p class="mail">camelia.mazouz@etu.u-paris.fr</p>
+                        <p><button onclick="location.href='mailto:camelia.mazouz@etu.u-paris.fr?subject=Contact';" class="button">Contacter</button></p>
+                    </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="card">
+                    <img src="/assets/mayane.jpg" alt="Mayane Cohen">
+                    <div class="members">
+                        <h2>Mayane Cohen</h2>
+                        <p class="mail">mayane.cohen@etu.u-paris.fr</p>
+                        <p><button onclick="location.href='mailto:mayane.cohen@etu.u-paris.fr?subject=Contact';" class="button">Contacter</button></p>
+                    </div>
+                </div>
+              </div>
+                <div class="column">
+                  <div class="card">
+                      <img src="/assets/amayas.jpg" alt="Amayas Matmar">
+                      <div class="members">
+                          <h2>Amayas Matmar</h2>
+                          <p class="mail">amayas.matmar@etu.u-paris.fr</p>
+                          <p><button onclick="location.href='mailto:amayas.matmar@etu.u-paris.fr?subject=Contact';" class="button">Contacter</button></p>
+                      </div>
+                  </div>
+                </div>
+      </article>
+    </div>
+  </div>
+</body>
+</html>

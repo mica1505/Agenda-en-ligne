@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href=".\assets\favicon.ico">
+    <link rel="stylesheet" type="text/css" href="\style_register.css">
+    <script src="time.js" defer ></script>
+    <title>UP AGENDA | Inscription</title>
+</head>
+<body class="body_register">
+    <header class="barre_logo">
+        <p>
+          <a href="/welcome"><p>
+            <span id="logo_blanc">UP</span>
+            <span id="logo_violet">AGENDA</span></a>
+            <div class="row">
+              <div class="col-sm-12" id="heure"></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12" id="date"></div>
+          </div>
+        </p>
+        <a class="connection" href="/connexion" target="" id="connection">Connexion</a>
+        <a class="inscription" href="" target="" class="color-purple">Inscription</a>
+    </header>
+    <!--<p class="erreur"> <%= locals.bonjour %> </p> -->
+    <form method="post" action="/api/user/register">
+        <fieldset>
+        <legend>Inscrivez-vous</legend>
+        <% if (locals.erreur){ %>
+            <div class="alert_error" >
+              <%= locals.erreur%>
+            </div>
+          <% } %>
+          <% if (locals.success){ %>
+            <div class="alert_success" >
+              <%= locals.success%>
+            </div>
+          <% } %>
+            <label class="label_inline_register">Nom<strong>*</strong></label>
+            <label>Prenom<strong>*</strong></label><br>
+            <input type="text" class="inline" id="register_last_name" name="register_last_name" placeholder=" Renseignez votre nom" >
+            <input type="register_first_name" name="register_first_name" class="inline" placeholder=" Renseignez votre prenom">
+            <label>Date de naissance</label><br>
+            <input type="date" id="date_birth" name="date_birth" class="saisie">
+            <label>Adresse mail<strong>*</strong></label><br>
+            <input id="email_register" class="saisie" name="email_register" type="text" placeholder=" Renseignez votre email" ><br>
+            <label>Nom d'utilisateur<strong>*</strong></label><br>
+            <input id="user_name" class="saisie" name="user_name" type="text" placeholder=" Renseignez votre nom d'utilisateur" ><br>
+            <label class="label_mp">Mot de passe<strong>*</strong></label>
+            <label>Confirmation de mot de passe<strong>*</strong></label><br>
+            <input id="password_register" class="inline" name = "password_register" type="password" placeholder=" Renseignez votre mot e passe" maxlength="30" >
+            <input id="password_confirmation" class="inline" name = "password_confirmation" type="password" placeholder=" Renseignez votre mot e passe" maxlength="30" >
+        </fieldset>
+        <input id="btn_inscription" class="bouton" type="submit" placeholder="" value="Inscription">
+    </form>
+    <footer>
+    </footer>
+</body>
+</html>

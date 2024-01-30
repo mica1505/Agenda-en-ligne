@@ -1,0 +1,228 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+.container-middle {
+  background-color: rgba(246, 229, 248, 0.942);
+  width: 100%;
+  padding: 0px -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+}
+.wrapper{
+  display: flex;
+}
+.container {
+  min-height: 100vh;
+}
+.container-left {
+  background: white;
+  min-height: calc(100vh - 60px);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width : 345px;
+}
+#logo_violet{
+  font-family: Inter;
+  font-size: 34px;
+  color : rgb(94, 129, 244);
+}
+#logo_blanc{
+  font-family: Inter;
+  background-color: rgb(94, 129, 244);
+  color : white;
+  font-size: 34px;
+  margin: 10px 8px 0px 0px;
+  padding:5px;
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.btn-new-task {
+  margin-top: 14px;
+  background: rgb(94, 129, 244);
+  padding: 15px;
+  color: white;
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+}
+div.btn-new-task:hover {
+  box-shadow: 3px 8px 22px rgba(94,28,68,.15);
+  transform: scale(1.1);
+  transition: .2s ease-in-out;
+}
+.menu {
+  margin-top: 10px;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  font-size: 20px;
+  isolation: isolate;
+}
+.item-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#first{
+  margin-top: 30px;
+}
+.item-menu img {
+  width: 22px;
+  height: 22px;
+}
+.item-menu a {
+  color: #8DA1B5;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+.item-menu .color-purple {
+  color: rgb(94, 129, 244);
+}
+.item-menu a:hover {
+  color: rgb(94, 129, 244);
+}
+.container-btn-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.btn-user {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+.sidebar {
+	flex: 1 1 0;
+	padding: 2rem;
+}
+* {
+	box-sizing: border-box;
+}
+.row {
+  color: rgb(94, 129, 244);
+  text-align: center;
+}
+label{
+  font-size: 20px; 
+}
+input.user_search{
+  background-color : hsla(240, 67%, 94%, 0.5);
+  width : 400px;
+  height : 40px;
+  border : 2px solid;
+  border-color : rgb(94, 129, 244);
+  margin : 10px 0px 10px 0px;
+  font-size: 18.5px;
+  border-radius : 4px;
+  font-size : 13px;
+  isolation: isolate;
+}
+.darkmode--activated input.user_search{
+  background-color : hsla(240, 34%, 26%, 0.5);
+  color : white;
+}
+.darkmode--activated .search_result{
+  color : hsl(259, 68%, 50%);
+}
+ul{
+  list-style: none;
+  position: absolute;
+  width : 400px;
+  padding-bottom: 5px;
+  margin-left : 0px; 
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+ul .list_user{
+  font-size: 20px;
+  padding : 0.5rem;
+  border-bottom: solid 1px #4f71e1;
+  margin-left:-30px;
+}
+ul .list_user:hover{
+  box-shadow: 3px 8px 22px rgba(94,28,68,.15);
+  transform: scale(1);
+  transition: .2s ease-in-out;
+}
+.select_time{
+  display: inline-block;
+  font-size: 20px;
+  padding : 0.5rem;
+  border-bottom: solid 1px #4f71e1;
+  margin-left:-30px;
+  background-color: rgba(168, 187, 249, 0.896);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom : 10px;
+  text-align: center;
+  width : 45%;
+  margin-right: 40px;
+}
+ul li .select_time:nth-child(odd) {
+  display : inline;
+}
+ul li .select_time:nth-child(even) {
+  float: right;
+}
+li{
+  cursor: pointer;
+}
+.select_time:hover{
+  box-shadow: 3px 8px 22px rgba(94,28,68,.15);
+  transform: scale(1);
+  transition: .2s ease-in-out;
+}
+.alert_error {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  color:#58151c ;
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+  border-radius: 8px;
+}
+.alert_success {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  color:#198754;
+  background-color: #d1e7dd;
+  border: 1px solid #a3cfbb ;
+  border-radius: 8px;
+}
+#search{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 25px;
+  color: rgb(94, 129, 244);
+  isolation: isolate;
+}
+.search{
+  margin-bottom: 100px;
+}
+.header{
+  margin-top : -30px;
+  text-decoration: none;
+  isolation: isolate;
+}
+.select_user{
+  max-height: 240px;
+  overflow-y: auto;
+  margin-left : 1.55rem;
+}
+.select_user::-webkit-scrollbar {
+  display: none; 
+}
+.darkmode--activated .container-middle{
+  background: rgb(238, 236, 236);
+}

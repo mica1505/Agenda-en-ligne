@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style_to_do.css">
+    <script src='/time.js' defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href=".\assets\favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src='/theme.js' defer></script>
+    <script src="/to_do.js" defer></script>
+    <title>UP AGENDA | To-do list</title>
+</head>
+<body>
+    <div class="wrapper">
+    <!--Menu gauche-->
+    <div class="container container-left">
+      <div class="header">
+          <a href="/welcome"><p>
+              <span id="logo_blanc">UP</span>
+              <span id="logo_violet">AGENDA</span>
+          </a>
+              <div class="row">
+                <div class="col-sm-12" id="heure"></div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12" id="date"></div>
+              </div>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          </p>
+      </div>
+      <div class="btn-new-task">
+          <a href="/creationTache" id="ajouter_une_tache" name="ajouter_une_tache" class="btn-new-task">
+              Ajouter un événement
+          </a>
+      </div>
+      <nav class="menu">
+        <div class="item-menu" id="first">
+          <i class="fa fa-calendar" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+            <a href="/">Calendrier</a>
+        </div>
+        <div class="item-menu">
+          <i class="fa fa-tasks" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+          <a href="/evenements">Toutes les tâches</a>
+        </div>
+        <div class="item-menu">
+          <i class="fa fa-calendar-check-o" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+            <a href="/todo" class="color-purple">To-do list</a>
+        </div>
+        <div class="item-menu">
+          <i class="fa fa-clock-o" style="font-size:40px; color:rgb(94, 129, 244)"></i>
+            <a href="/rendezVous">Horaires libres</a>
+        </div>
+        <div class="item-menu">
+            <i class="fa fa-users" style="font-size:30px; color:rgb(94, 129, 244)"></i>
+              <a href="/recherche">Autres utilisateurs</a>
+          </div>
+        <div class="item-menu">
+          <i class="fa fa-gear" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+            <a href="/settings">Paramètres</a>
+        </div>
+        <div class="item-menu">
+          <i class="fa fa-sign-out" style="font-size:34px; color:rgb(94, 129, 244)"></i>
+            <a href="/api/user/logout">Déconnexion</a>
+        </div>
+      </nav>
+        </div>
+        <!--Contenu du milieu-->
+        <div class="container container-middle">
+          <div class="to_do">
+            <form class="" method="post" action="/api/todo/add">
+              <fieldset>
+                <h4 id="all">To-do list</h4>
+                <div class="form-outline flex-fill">
+                  <input type="text" id="input_toDo" name="input_toDo" class="input_toDo" placeholder=" Ajoutez une tâche" autofocus/>
+                  <button type="submit" class="btn"><i class="fa fa-plus"></i></button>
+                </div>
+              </fieldset>
+            </form>
+            <div class="list">
+              <% if(locals.toDoList) { %>
+                <% toDo = locals.toDoList%>
+                <ul>
+                <% toDo.forEach(function(elem){ %>
+                  <li class="li_box">
+                    <input id="<%=elem.description%>" name="<%=elem.description%>" to_do_id ="<%= elem.id%>" description="" type="checkbox" style="transform: scale(1.4);" onchange="checkedItem(this)">
+                    <label for="<%=elem.description%>"><input id="" name="" to_do_id ="<%= elem.id%>" class="updateToDo" type="text" value="<%=elem.description%>" onchange="updateIn(this)"></label>
+                  </li>
+                <%})%>
+                </ul>
+              <% } %>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
